@@ -25,7 +25,7 @@ export const Home = () => {
 
             return [
                 ...previousState,
-                ...[...new Array(5)].map((_, index) => {
+                ...[...new Array(30)].map((_, index) => {
                     return {
                         x: index * BATTERY_X_DISTANCE,
                         z: lastBattery.z + BATTERY_Z_DISTANCE,
