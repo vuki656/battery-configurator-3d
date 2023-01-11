@@ -12,4 +12,7 @@ module.exports = {
         "next.config.js",
         ".eslintrc.js",
     ],
+    rules: {
+        'react/no-unknown-property': 'off'
+    }
 }

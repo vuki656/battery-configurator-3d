@@ -12,10 +12,10 @@ export const Battery = (props: MeshProps) => {
     return (
         <mesh
             {...props}
-            onPointerOut={(event) => {
+            onPointerOut={() => {
                 hover(false)
             }}
-            onPointerOver={(event) => {
+            onPointerOver={() => {
                 hover(true)
             }}
             ref={ref}

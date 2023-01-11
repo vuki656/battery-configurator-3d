@@ -12,6 +12,7 @@
         "threejs",
         "eslintcache",
         "stylelintrc",
-        "yarnrc"
+        "yarnrc",
+        "stylelintcache"
     ]
 }
