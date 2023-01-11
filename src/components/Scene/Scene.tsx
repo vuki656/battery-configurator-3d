@@ -1,4 +1,4 @@
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import type { SceneProps } from '@react-three/fiber'
 import { Canvas } from '@react-three/fiber'
 
@@ -21,7 +21,13 @@ export const Scene = (props: SceneProps) => {
                 position={[10, 10, 10]}
             />
             <pointLight position={[-10, -10, -10]} />
-            <OrbitControls />
+            <OrbitControls minZoom={30} />
+            <PerspectiveCamera
+                makeDefault
+                position={[-200, 100, -90]}
+                fov={60}
+                zoom={5}
+            />
             {children}
         </Canvas>
     )
