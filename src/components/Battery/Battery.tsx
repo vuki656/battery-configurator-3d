@@ -20,7 +20,7 @@ export const Battery = (props: MeshProps) => {
             }}
             ref={ref}
         >
-            <boxGeometry args={[1, 1, 1]} />
+            <cylinderGeometry args={[1, 1, 3, 15]} />
             <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
         </mesh>
     )
