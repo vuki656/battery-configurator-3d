@@ -13,9 +13,13 @@
         "start": "next start"
     },
     "dependencies": {
+        "@react-three/drei": "^9.51.24",
+        "@react-three/fiber": "^8.10.0",
+        "@types/three": "^0.148.0",
         "next": "13.1.1",
         "react": "18.2.0",
-        "react-dom": "18.2.0"
+        "react-dom": "18.2.0",
+        "three": "^0.148.0"
     },
     "devDependencies": {
         "@rimac-technology/style-guide": "^1.4.5",
