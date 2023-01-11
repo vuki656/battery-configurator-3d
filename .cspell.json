@@ -3,5 +3,15 @@
     "cache": {
         "useCache": true
     },
-    "ignoreWords": ["stylelint", "configurator", "loglevel", "rimac"]
+    "ignoreWords": [
+        "stylelint",
+        "configurator",
+        "loglevel",
+        "rimac",
+        "drei",
+        "threejs",
+        "eslintcache",
+        "stylelintrc",
+        "yarnrc"
+    ]
 }
