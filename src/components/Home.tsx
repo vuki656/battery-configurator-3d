@@ -4,6 +4,10 @@ import { Battery } from './Battery'
 import { BatteryType } from './Home.types'
 import { Scene } from './Scene'
 
+const BATTERY_X_DISTANCE = 2
+const BATTERY_Z_DISTANCE = 2
+const BATTERY_Y_DISTANCE = 4
+
 export const Home = () => {
     const [batteries, setBatteries] = useState<BatteryType[]>([])
 
@@ -23,9 +27,23 @@ export const Home = () => {
                 ...previousState,
                 ...[...new Array(5)].map((_, index) => {
                     return {
-                        x: lastBattery.y + (index * 2),
-                        z: lastBattery.z + 2,
+                        x: index * BATTERY_X_DISTANCE,
+                        z: lastBattery.z + BATTERY_Z_DISTANCE,
                         y: lastBattery.y
+                    }
+                })
+            ]
+        })
+    }
+
+    const onBatteryStackAdd = () => {
+        setBatteries((previousState) => {
+            return [
+                ...previousState,
+                ...previousState.map((battery) => {
+                    return {
+                        ...battery,
+                        y: battery.y + BATTERY_Y_DISTANCE
                     }
                 })
             ]
@@ -35,6 +53,7 @@ export const Home = () => {
     return (
         <>
             <button onClick={onBatteryRowAdd}>Add Battery Row</button>
+            <button onClick={onBatteryStackAdd}>Add Battery Stack</button>
             <button onClick={onClear}>Clear</button>
             <Scene>
                 {batteries.map((battery) => {
