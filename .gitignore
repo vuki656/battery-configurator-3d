@@ -18,3 +18,7 @@
 
 # Typescript
 next-env.d.ts
+
+# Caches
+.cspellcache
+.eslintcache

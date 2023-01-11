@@ -1,0 +1,7 @@
+{
+    "useGitignore": true,
+    "cache": {
+        "useCache": true
+    },
+    "ignoreWords": ["stylelint", "configurator", "loglevel", "rimac"]
+}
